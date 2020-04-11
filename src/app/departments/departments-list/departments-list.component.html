@@ -1,0 +1,12 @@
+<ul class="departments">
+  <li *ngFor="let department of departments$ | async">
+    <a [routerLink]="['/departments/detail', department.id]">{{ department.name }}</a>
+    <button>
+      <a [routerLink]="['/departments/edit', department.id]">Edit</a>
+    </button>
+    <button (click)="deleteDepartment(department.id)">Delete</button>
+  </li>
+</ul>
+<button>
+ <a [routerLink]="['/departments/create']">Create</a>
+</button>

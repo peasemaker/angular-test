@@ -1,0 +1,10 @@
+<div *ngIf="department$ | async as department">
+  <input #name type="text" value={{department.name}} />
+  <br/>
+  <input #desc type="text" value={{department.description}} />
+  <button (click)="editDepartment(department.id, name.value, desc.value)">Edit</button>
+</div>
+<br/>
+<button [routerLink]="['/departments']">Back</button>
+
+

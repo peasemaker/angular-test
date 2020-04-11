@@ -1,0 +1,8 @@
+<div *ngIf="department$ | async as department">
+  <span>{{department.name}}</span>
+  <br/>
+  <span>{{department.description}}</span>
+</div>
+<br/>
+<button [routerLink]="['/departments']">Back</button>
+
